@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Hansika!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #d63384;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .quiz {
+            margin-top: 30px;
+        }
+        .question {
+            margin: 15px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #d63384;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Valentine's Day meri baby buggi hansu baby sabse zyada sundar and mooo baby 💖</h1>
+     <div class="quiz">
+        <div class="question">Will you be my valentine?
+            <br>
+            <button onclick="checkAnswer(this, 'correct')">yes</button>
+            <button onclick="checkAnswer(this, 'wrong')">no never mo</button>
+    <h2>Our Memories 📸</h2>
+    <div class="gallery" id="gallery"></div>
+    
+    <h2>How Well Do You Know me? 💑</h2>
+    <div class="quiz">
+        <div class="question">Where did we first meet?
+            <br>
+            <button onclick="checkAnswer(this, 'correct')">mdr theatre back seat</button>
+            <button onclick="checkAnswer(this, 'wrong')">mdr theatre outside</button>
+        </div>
+        <div class="question">What’s my favorite game
+            <br>
+            <button onclick="checkAnswer(this, 'correct')">souls</button>
+            <button onclick="checkAnswer(this, 'wrong')">teasing you</button>
+        </div>
+    </div>
+    
+    <script>
+        const images = [
+            'us.jpg', 'usss.jpg', 'salimo.jpg' // Replace with actual image paths
+        ];
+        
+        const galleryDiv = document.getElementById('gallery');
+        images.forEach(src => {
+            let img = document.createElement('img');
+            img.src = src;
+            galleryDiv.appendChild(img);
+        });
+
+        function checkAnswer(button, status) {
+            if (status === 'correct') {
+                button.style.backgroundColor = 'green';
+                button.innerText = 'Correct! 💕';
+            } else {
+                button.style.backgroundColor = 'red';
+                button.innerText = 'Oopsies! Try again.';
+            }
+        }
+ 
+    </script>
+</body>
+</html>
